@@ -3,19 +3,46 @@
 }
 
 .team__members {
-  display: flex;
+  @include mq(tab) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team__card {
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  &:not(:first-child) {
-    margin-left: 30px;
+  @include mq(mob-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tab-only) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq(desk) {
+    width: calc((100% - 3 * 30px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
