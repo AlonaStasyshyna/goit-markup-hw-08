@@ -31,6 +31,14 @@
             >Web<span class="header__logo--dark">Studio</span></a
           >
 
+          <!-- Кнопка меню -->
+          <button class="menu__btn" type="button" data-menu-button>
+            <svg width="40" height="40">
+              <use class="menu__icon" href="./images/icons.svg#header-menu"></use>
+              <use class="menu__close-icon" href="./images/icons.svg#header-close"></use>
+            </svg>
+          </button>
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a class="site-nav__link" href="./index.html">Студия</a>
@@ -63,6 +71,51 @@
           </li>
         </ul>
       </div>
+
+      <!-- Меню -->
+      <div class="menu is-hidden" data-menu>
+        <div class="menu__list">
+          <ul class="menu-site-nav">
+            <li class="menu-site-nav__item">
+              <a class="menu-site-nav__link" href="./index.html">Студия</a>
+            </li>
+            <li class="menu-site-nav__item">
+              <a class="menu-site-nav__link menu-site-nav__link--current" href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="menu-site-nav__item">
+              <a class="menu-site-nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="menu-contacts">
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__tel" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__email" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="menu-social-networks">
+            <li class="menu-social-networks__item">
+              <a class="menu-social-networks__link" href="">Instagram</a>
+            </li>
+            <li class="menu-social-networks__item">
+              <a class="menu-social-networks__link" href="">Twitter</a>
+            </li>
+            <li class="menu-social-networks__item">
+              <a class="menu-social-networks__link" href="">Facebook</a>
+            </li>
+            <li class="menu-social-networks__item">
+              <a class="menu-social-networks__link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- Уникальный контент страницы -->
@@ -94,13 +147,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-1.jpg"
-                    alt="Сайт компании Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-1_desk.jpg 1x, ./images/card-1_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-1_tab.jpg 1x, ./images/card-1_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-1_mob.jpg 1x, ./images/card-1_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-1_mob.jpg"
+                      alt="Сайт компании Технокряк"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -118,13 +191,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-2.jpg"
-                    alt="Постер с баскетболистами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-2_desk.jpg 1x, ./images/card-2_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-2_tab.jpg 1x, ./images/card-2_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-2_mob.jpg 1x, ./images/card-2_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-2_mob.jpg"
+                      alt="Постер с баскетболистами"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -142,13 +235,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-3.jpg"
-                    alt="Логотип рыбного ресторана"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-3_desk.jpg 1x, ./images/card-3_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-3_tab.jpg 1x, ./images/card-3_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-3_mob.jpg 1x, ./images/card-3_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-3_mob.jpg"
+                      alt="Логотип рыбного ресторана"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -166,13 +279,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-4.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-4_desk.jpg 1x, ./images/card-4_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-4_tab.jpg 1x, ./images/card-4_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-4_mob.jpg 1x, ./images/card-4_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-4_mob.jpg"
+                      alt="Наушники"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -190,13 +323,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-5.jpg"
-                    alt="Подарочные коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-5_desk.jpg 1x, ./images/card-5_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-5_tab.jpg 1x, ./images/card-5_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-5_mob.jpg 1x, ./images/card-5_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-5_mob.jpg"
+                      alt="Подарочные коробки"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -214,13 +367,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-6.jpg"
-                    alt="Монитор с открытой веб-страницей"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-6_desk.jpg 1x, ./images/card-6_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-6_tab.jpg 1x, ./images/card-6_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-6_mob.jpg 1x, ./images/card-6_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-6_mob.jpg"
+                      alt="Монитор с открытой веб-страницей"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -238,13 +411,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-7.jpg"
-                    alt="Дизайн страниц журнала"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-7_desk.jpg 1x, ./images/card-7_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-7_tab.jpg 1x, ./images/card-7_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-7_mob.jpg 1x, ./images/card-7_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-7_mob.jpg"
+                      alt="Дизайн страниц журнала"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -262,13 +455,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-8.jpg"
-                    alt="Бирка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-8_desk.jpg 1x, ./images/card-8_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-8_tab.jpg 1x, ./images/card-8_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-8_mob.jpg 1x, ./images/card-8_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-8_mob.jpg"
+                      alt="Бирка"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -286,13 +499,33 @@
             <li class="projects__item">
               <a href="">
                 <div class="projects__thumb">
-                  <img
-                    class="projects__img"
-                    src="./images/card-9.jpg"
-                    alt="Ноутбук с открытой веб-страницей"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- desktop screen -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/card-9_desk.jpg 1x, ./images/card-9_desk@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- tablet screen -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/card-9_tab.jpg 1x, ./images/card-9_tab@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <!-- mobile screen -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="./images/card-9_mob.jpg 1x, ./images/card-9_mob@2x.jpg 2x"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/card-9_mob.jpg"
+                      alt="Ноутбук с открытой веб-страницей"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="projects__description">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -392,5 +625,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

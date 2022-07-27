@@ -16,14 +16,13 @@
 .header__logo {
   @extend %logo;
 
-  @include mq(mob) {
+  @include mq(mob-only) {
     padding: 16px 0;
-    // margin-right: 93px;
   }
 
   @include mq(tab) {
     padding: 26px 0;
-    // margin-right: 93px;
+    margin-right: 88px;
   }
 
   @include mq(desk) {

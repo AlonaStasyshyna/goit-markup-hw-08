@@ -21,9 +21,6 @@
 .site-nav {
   @include mq(mob-only) {
     display: none;
-    // position: absolute;
-    // left: 0;
-    // top: 100%;
   }
 
   @include mq(tab) {
@@ -34,8 +31,8 @@
 .site-nav__item {
   position: relative;
 
-  &:not(:first-child) {
-    margin-left: 50px;
+  &:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
@@ -84,22 +81,35 @@
 
 // Контакты
 .contacts {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+
   @include mq(mob-only) {
     display: none;
   }
-  @include mq(tab) {
-    display: flex;
-    margin-left: auto;
+  @include mq(tab-only) {
+    flex-direction: column;
   }
 }
 
-.contacts__item:not(:first-child) {
-  margin-left: 50px;
+.contacts__item:not(:last-child) {
+  @include mq(tab-only) {
+    margin-bottom: 10px;
+  }
+
+  @include mq(desk) {
+    margin-right: 50px;
+  }
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
+
+  @include mq(tab-only) {
+    padding: 0;
+  }
 }
 
 .contacts__icon {

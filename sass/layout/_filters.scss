@@ -1,11 +1,32 @@
 .filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+
+  @include mq(mob-only) {
+    justify-content: flex-start;
+    margin-bottom: 40px;
+  }
+
+  @include mq(tab) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
 }
 
-.filters__item:not(:first-child) {
-  margin-left: 8px;
+.filters__item:not(:last-child) {
+  margin-right: 8px;
+
+  @include mq(mob-only) {
+    margin-bottom: 15px;
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .filters__button {

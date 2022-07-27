@@ -96,6 +96,13 @@
   }
 }
 
+.form__text {
+  @include mq(not-desk) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+}
+
 .form__policy {
   text-decoration: underline;
   color: var(--accent-color);
