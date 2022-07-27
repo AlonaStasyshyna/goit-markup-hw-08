@@ -1097,6 +1097,11 @@ button {
   border: 1px solid #eeeeee;
   border-top: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .projects__caption--bg {
+    padding-bottom: 56px;
+  }
+}
 
 .projects__name {
   margin-bottom: 4px;
