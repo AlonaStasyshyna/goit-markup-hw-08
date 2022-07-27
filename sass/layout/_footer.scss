@@ -13,11 +13,20 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  @include mq(tab-only) {
+    padding-left: 61px;
+    padding-right: 61px;
+  }
 }
 
 .footer-nav {
   @include mq(mob-only) {
     margin-bottom: 60px;
+  }
+
+  @include mq(tab) {
+    margin-right: 165px;
   }
 
   @include mq(desk) {
@@ -75,10 +84,13 @@
 .call-to-action {
   display: block;
   margin-bottom: 20px;
-  text-align: center;
 
   line-height: 1.14;
   text-transform: uppercase;
 
   color: var(--primary-white-color);
+
+  @include mq(not-desk) {
+    text-align: center;
+  }
 }

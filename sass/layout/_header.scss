@@ -3,17 +3,32 @@
 }
 
 .header > .container {
-  display: flex;
+  position: relative;
+  @include mq(tab) {
+    display: flex;
+  }
 }
 
 // Навигация сайта
 .main-nav {
   display: flex;
   align-items: center;
+  @include mq(mob-only) {
+    justify-content: space-between;
+  }
 }
 
 .site-nav {
-  display: flex;
+  @include mq(mob-only) {
+    display: none;
+    // position: absolute;
+    // left: 0;
+    // top: 100%;
+  }
+
+  @include mq(tab) {
+    display: flex;
+  }
 }
 
 .site-nav__item {
@@ -69,8 +84,13 @@
 
 // Контакты
 .contacts {
-  display: flex;
-  margin-left: auto;
+  @include mq(mob-only) {
+    display: none;
+  }
+  @include mq(tab) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .contacts__item:not(:first-child) {

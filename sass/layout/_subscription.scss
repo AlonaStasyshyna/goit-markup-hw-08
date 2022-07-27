@@ -1,4 +1,10 @@
 .subscription {
+  @include mq(tab) {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include mq(desk) {
     width: 570px;
     margin-top: 12px;
@@ -6,18 +12,24 @@
 }
 
 .subscription__form {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  @include mq(desk) {
+    display: flex;
+    align-items: center;
+  }
+}
 
-  @include mq(mob-only) {
-    flex-direction: column;
-    justify-content: center;
+.subscription__label {
+  @include mq(tab-only) {
+    display: block;
+    width: 450px;
   }
 }
 
 .subscription__input {
+  display: block;
+  width: 100%;
   padding: 15px 16px;
+
   border-radius: 4px;
 
   color: var(--primary-white-color);
@@ -27,9 +39,11 @@
 
   /* outline: transparent; */
 
-  @include mq(mob-only) {
-    max-width: 100%;
+  @include mq(not-desk) {
+    // width: 450px;
+    margin-bottom: 20px;
   }
+
   @include mq(desk) {
     width: 358px;
     height: 50px;
@@ -41,6 +55,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .subscription__icon {
